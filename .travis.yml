@@ -5,6 +5,7 @@ addons:
   apt:
     packages:
     - nuget
+    - msbuild
 
 mono: none
 dotnet: 5.0
@@ -15,5 +16,5 @@ install:
   - dotnet add ./TestBossFight/TestBossFight.csproj package NUnit.Console --version 3.12.0 --package-directory testrunner
 
 script:
-  - xbuild /p:Configuration=Release Bossfight.sln
+  - msbuild /p:Configuration=Release Bossfight.sln
   - dotnet ./testrunner/NUnit.ConsoleRunner.3.12.0/tools/nunit3-console.exe ./TestBossFight/bin/Release/TestBossFight.dll
