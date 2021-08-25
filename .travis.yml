@@ -16,4 +16,4 @@ install:
 
 script:
   - dotnet build /p:Configuration=Release Bossfight.sln
-  - dotnet ./testrunner/NUnit.ConsoleRunner.3.12.0/tools/nunit3-console.exe ./TestBossFight/bin/Release/TestBossFight.dll
+  - dotnet test
