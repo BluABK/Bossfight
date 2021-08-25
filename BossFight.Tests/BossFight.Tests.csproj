@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bossfight\BossFight.csproj" />
+    <ProjectReference Include="..\BossFight\BossFight.csproj" />
   </ItemGroup>
 
 </Project>
