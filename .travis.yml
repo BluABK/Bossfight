@@ -1,0 +1,10 @@
+language: csharp
+mono: none
+dotnet: 5.0
+solution: Bossfight.sln
+install:
+  - nuget restore Bossfight.sln
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Release Bossfight.sln
+  - dotnet ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./TestBossFight/bin/Release/TestBossFight.dll
