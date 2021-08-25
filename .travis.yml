@@ -15,5 +15,5 @@ install:
   - dotnet add ./TestBossFight/TestBossFight.csproj package NUnit.Console --version 3.12.0 --package-directory testrunner
 
 script:
-  - msbuild /p:Configuration=Release Bossfight.sln
+  - xbuild /p:Configuration=Release Bossfight.sln
   - dotnet ./testrunner/NUnit.ConsoleRunner.3.12.0/tools/nunit3-console.exe ./TestBossFight/bin/Release/TestBossFight.dll
