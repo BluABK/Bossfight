@@ -1,5 +1,5 @@
 language: csharp
-solution: Bossfight.sln
+solution: BossFight.sln
 
 addons:
   apt:
@@ -10,10 +10,9 @@ mono: none
 dotnet: 5.0
 
 install:
-  - nuget restore Bossfight.sln
-  #- nuget install NUnit.Console -Version 3.12.0 -OutputDirectory testrunner
-  - dotnet add ./TestBossFight/TestBossFight.csproj package NUnit.Console --version 3.12.0 --package-directory testrunner
+  - nuget restore BossFight.sln
+  - dotnet add ./BossFight.Tests/BossFight.Tests.csproj package NUnit.Console --version 3.12.0 --package-directory testrunner
 
 script:
-  - dotnet build /p:Configuration=Release Bossfight.sln
+  - dotnet build /p:Configuration=Release BossFight.sln
   - dotnet test
