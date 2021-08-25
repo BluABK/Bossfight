@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace TestBossFight
+namespace BossFightTest
 {
     public class Tests
     {

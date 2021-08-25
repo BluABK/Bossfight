@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bossfight
+namespace BossFight
 {
     class Program
     {
