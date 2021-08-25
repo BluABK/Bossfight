@@ -14,5 +14,11 @@ namespace TestBossFight
         {
             Assert.Pass();
         }
+        
+        [Test]
+        public void TestThatFails()
+        {
+            Assert.Fail();
+        }
     }
 }
