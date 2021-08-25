@@ -11,7 +11,8 @@ dotnet: 5.0
 
 install:
   - nuget restore Bossfight.sln
-  - nuget install NUnit.Console -Version 3.12.0 -OutputDirectory testrunner
+  #- nuget install NUnit.Console -Version 3.12.0 -OutputDirectory testrunner
+  - dotnet add package NUnit.Console --version 3.12.0 --package-directory testrunner
 
 script:
   - msbuild /p:Configuration=Release Bossfight.sln
