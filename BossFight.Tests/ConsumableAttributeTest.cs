@@ -108,7 +108,7 @@ namespace BossFight.Tests
 
             myConsumableAttribute.Value = -1;
 
-            Assert.AreEqual(BaseMaxValue, myConsumableAttribute.Value);
+            Assert.AreEqual(0, myConsumableAttribute.Value);
         }
     }
 }

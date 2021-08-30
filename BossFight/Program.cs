@@ -7,7 +7,7 @@ namespace BossFight
         static void Main(string[] args)
         {
 
-            GameCharacter player = new GameCharacter("Hero", 100);
+            GameCharacter player = new GameCharacter("Hero", health: 100);
 
             // Simulate a hit to HP:
             player.Health.Value = 25;

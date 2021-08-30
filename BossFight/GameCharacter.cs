@@ -22,6 +22,8 @@ namespace BossFight
         public int Level { get; set; } = 1;
         public int Experience { get; set; } = 0;
 
+        public readonly GameCharacterInventory Inventory;
+
         public GameCharacter(string name, int health, string profession = "enigma", int strength = DefaultAttributeValue, int stamina = DefaultAttributeValue, 
                              int mana = 0, int intelligence = DefaultAttributeValue, int dexterity = DefaultAttributeValue, int level = 1)
         {

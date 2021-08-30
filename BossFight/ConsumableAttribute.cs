@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BossFight
 {
@@ -39,7 +35,7 @@ namespace BossFight
             } 
             else if (newValue < 0) 
             { 
-                value = maxValue; 
+                value = 0; 
             }
             else
             {
