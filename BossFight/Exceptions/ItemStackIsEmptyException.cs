@@ -6,7 +6,7 @@ namespace BossFight.Exceptions
     [Serializable]
     public class ItemStackIsEmptyException : Exception
     {
-        private ItemStack itemStack = null;
+        private readonly ItemStack itemStack = null; // FIXME: Use!
         public ItemStackIsEmptyException()
         {
         }

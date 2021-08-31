@@ -40,24 +40,14 @@ namespace BossFight
 
         }
 
-        public void Fight()
-        {
-
-        }
-
-        public void Recharge()
-        {
-
-        }
-
-        private string PaddedAttributeString(ConsumableAttribute attr, string name)
+        private static string PaddedAttributeString(ConsumableAttribute attr, string name)
         {
             string descriptor = $"{name}:";
 
             return $"{descriptor,-5}{attr.Value}/{attr.MaxValue}";
         }
 
-        private string PaddedAttributeString(int attr, string name)
+        private static string PaddedAttributeString(int attr, string name)
         {
             string descriptor = $"{name}:";
 

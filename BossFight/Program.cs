@@ -4,10 +4,10 @@ namespace BossFight
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
-            GameCharacter player = new GameCharacter("Hero", health: 100);
+            GameCharacter player = new("Hero", health: 100);
 
             // Simulate a hit to HP:
             player.Health.Value = 25;

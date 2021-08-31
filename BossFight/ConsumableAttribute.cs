@@ -1,4 +1,5 @@
 ﻿using System;
+using BossFight.Exceptions;
 
 namespace BossFight
 {
@@ -10,6 +11,7 @@ namespace BossFight
             get => value;
             set => SetValueIfValid(value);
         }
+        private const int MinValue = 0;
         private int maxValue;
         public int MaxValue
         {
@@ -26,16 +28,17 @@ namespace BossFight
         private void SetValueIfValid(int newValue) 
         {
             if (newValue >= 0 && newValue <= maxValue) 
-            { 
+            {
+                // If new value is between 0 and max, assign it to own value.
                 value = newValue; 
             } 
-            else if (newValue >= maxValue) 
+            else if (newValue > maxValue) 
             {
-                value = maxValue;
+                throw new ValueAboveMaxValueException(newValue, maxValue);
             } 
             else if (newValue < 0) 
-            { 
-                value = 0; 
+            {
+                throw new ValueBelowMinValueException(newValue, MinValue);
             }
             else
             {
@@ -45,9 +48,12 @@ namespace BossFight
 
         private void SetMaxValueIfValid(int newMaxValue)
         {
-            if (newMaxValue >= 0)
+            if (newMaxValue >= MinValue)
             {
                 maxValue = newMaxValue;
+            } else
+            {
+                throw new ValueBelowMinValueException(newMaxValue, MinValue);
             }
         }
 

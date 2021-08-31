@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using BossFight;
+using BossFight.Exceptions;
 
 namespace BossFight.Tests
 {
@@ -10,6 +10,11 @@ namespace BossFight.Tests
         [SetUp]
         public void Setup()
         {
+        }
+
+        private protected static ConsumableAttribute CreateBaseConsumableAttribute()
+        {
+            return new ConsumableAttribute(BaseMaxValue);
         }
 
         [Test]
@@ -24,11 +29,7 @@ namespace BossFight.Tests
         [Test]
         public void TestSetNegativeMaxValueFails()
         {
-            ConsumableAttribute myConsumableAttribute = new(BaseMaxValue);
-
-            myConsumableAttribute.MaxValue = -1;
-
-            Assert.AreEqual(BaseMaxValue, myConsumableAttribute.MaxValue);
+            Assert.Throws<ValueBelowMinValueException>(() => CreateBaseConsumableAttribute().MaxValue = -1);
         }
 
         [Test]
@@ -74,11 +75,7 @@ namespace BossFight.Tests
         [Test]
         public void TestSetOneAboveMaxValueFails()
         {
-            ConsumableAttribute myConsumableAttribute = new(BaseMaxValue);
-
-            myConsumableAttribute.Value = BaseMaxValue + 1;
-
-            Assert.AreEqual(BaseMaxValue, myConsumableAttribute.Value);
+            Assert.Throws<ValueAboveMaxValueException>(() => CreateBaseConsumableAttribute().Value = BaseMaxValue + 1);
         }
 
         [Test]
@@ -104,11 +101,7 @@ namespace BossFight.Tests
         [Test]
         public void TestSetNegativeValueFails()
         {
-            ConsumableAttribute myConsumableAttribute = new(BaseMaxValue);
-
-            myConsumableAttribute.Value = -1;
-
-            Assert.AreEqual(0, myConsumableAttribute.Value);
+            Assert.Throws<ValueBelowMinValueException>(() => CreateBaseConsumableAttribute().Value = -1);
         }
     }
 }

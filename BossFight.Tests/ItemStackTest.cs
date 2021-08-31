@@ -15,7 +15,7 @@ namespace BossFight.Tests
         {
         }
 
-        private protected ItemStack CreateBaseItemStack() 
+        private protected static ItemStack CreateBaseItemStack() 
         {
             return new() 
             { 
