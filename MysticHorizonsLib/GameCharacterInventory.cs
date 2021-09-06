@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace BossFight
+namespace MysticHorizonsLib
 {
     public class GameCharacterInventory
     {

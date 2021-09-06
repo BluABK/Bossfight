@@ -1,7 +1,7 @@
 ﻿using System;
-using BossFight.Exceptions;
+using MysticHorizonsLib.Exceptions;
 
-namespace BossFight
+namespace MysticHorizonsLib
 {
     public class ItemStack : Item
     {

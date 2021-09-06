@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BossFight\BossFight.csproj" />
+    <ProjectReference Include="..\MysticHorizonsLib\MysticHorizonsLib.csproj" />
   </ItemGroup>
 
 </Project>

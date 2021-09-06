@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BossFight
+namespace MysticHorizonsLib
 {
-    class GameCharacter
+    public class GameCharacter
     {
         private const int DefaultAttributeValue = 10;
         public string Name { get; set; }

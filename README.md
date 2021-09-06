@@ -1,6 +1,5 @@
-# BossFight
-![Build Status](https://app.travis-ci.com/BluABK/Bossfight.svg)
-![Build Status](https://img.shields.io/github/repo-size/BluABK/Bossfight)
+# MysticHorizonsLib
+![Build Status](https://app.travis-ci.com/BluABK/MysticHorizonsLib.svg)
+![Build Status](https://img.shields.io/github/repo-size/BluABK/MysticHorizonsLib)
 
-Hero VS Boss
-
+A C# RPG Game Library.

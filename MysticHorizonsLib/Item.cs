@@ -1,4 +1,4 @@
-﻿namespace BossFight
+﻿namespace MysticHorizonsLib
 {
     public class Item 
     {

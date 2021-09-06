@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace BossFight.Exceptions
+namespace MysticHorizonsLib.Exceptions
 {
     [Serializable]
     public class ItemStackIsEmptyException : Exception

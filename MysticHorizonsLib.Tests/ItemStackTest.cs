@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using BossFight.Exceptions;
+using MysticHorizonsLib.Exceptions;
 
-namespace BossFight.Tests
+namespace MysticHorizonsLib.Tests
 {
     public class ItemStackTest
     {
